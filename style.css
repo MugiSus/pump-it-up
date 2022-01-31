@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Inter;
+    font-weight: 100 900;
+    src: url("Inter-VariableFont_slnt\,wght.ttf");
+}
+
+html, body {
+    font-family: Inter;
+    margin: 0;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.pumparea {
+    display: flex;
+}
+
+.pump {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.5);
+}
+
+.pumparea > span {
+    transition-duration: 1500ms;
+    transition-property: font-weight;
+    transition-timing-function: ease;
+    font-size: 6rem;
+    font-weight: 100;
+    color: #303030;
+    margin: 0 auto 0 1rem;
+}
+
+.pumparea:active > span {
+    transition-timing-function: cubic-bezier(0.075, 0.4, 0.165, 1);
+    transition-duration: 400ms;
+    font-weight: 900;
+}
